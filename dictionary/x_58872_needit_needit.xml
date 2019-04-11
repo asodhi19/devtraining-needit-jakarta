@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="4" type="collection">
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="7" type="collection">
         <element label="New field 1" max_length="40" name="new_field_1" type="integer"/>
         <element display="true" label="Contact Number" mandatory="true" max_length="9" name="u_contact_number" type="integer"/>
         <element default="John Doe" label="Creator" mandatory="true" max_length="100" name="u_creator" type="string"/>
@@ -14,6 +14,8 @@
             </choice>
         </element>
         <element label="Salary" max_length="40" name="u_salary" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_string_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_string_2" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" default="legal1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
             <choice>
                 <element label="Human Resources 1" sequence="0" value="hr1"/>
@@ -22,8 +24,7 @@
                 <element label="Facilities 2" sequence="3" value="facilities2"/>
                 <element label="Legal 1" sequence="4" value="legal1"/>
                 <element label="Legal 2" sequence="5" value="legal2"/>
-                <element label="Your Department Choice 1" sequence="6" value="your_choice1"/>
-                <element label="Your Department Choice 2" sequence="7" value="your_choice2"/>
+                <element label="Other" sequence="6" value="Other"/>
             </choice>
         </element>
         <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
